@@ -2133,7 +2133,7 @@ progress {
   box-shadow: 0 0 0 .25rem #0d6efd40;
 }
 
-.form-control::-webkit-date-and-time-testue {
+.form-control::-webkit-date-and-time-value {
   height: 1.5em;
 }
 
@@ -2675,18 +2675,18 @@ textarea.form-control-lg {
   padding-right: 3rem;
 }
 
-.input-group:not(.has-testidation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group:not(.has-testidation) > .dropdown-toggle:nth-last-child(n+3), .input-group.has-testidation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu), .input-group.has-testidation > .dropdown-toggle:nth-last-child(n+4) {
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu), .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > :not(:first-child):not(.dropdown-menu):not(.testid-tooltip):not(.testid-feedback):not(.intestid-tooltip):not(.intestid-feedback) {
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   margin-left: -1px;
 }
 
-.testid-feedback {
+.valid-feedback {
   width: 100%;
   color: #198754;
   margin-top: .25rem;
@@ -2694,7 +2694,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.testid-tooltip {
+.valid-tooltip {
   z-index: 5;
   max-width: 100%;
   color: #fff;
@@ -2708,11 +2708,11 @@ textarea.form-control-lg {
   top: 100%;
 }
 
-.was-testidated :testid ~ .testid-feedback, .was-testidated :testid ~ .testid-tooltip, .is-testid ~ .testid-feedback, .is-testid ~ .testid-tooltip {
+.was-validated :valid ~ .valid-feedback, .was-validated :valid ~ .valid-tooltip, .is-valid ~ .valid-feedback, .is-valid ~ .valid-tooltip {
   display: block;
 }
 
-.was-testidated .form-control:testid, .form-control.is-testid {
+.was-validated .form-control:valid, .form-control.is-valid {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right calc(.375em + .1875rem) center;
   background-repeat: no-repeat;
@@ -2721,61 +2721,61 @@ textarea.form-control-lg {
   padding-right: calc(1.5em + .75rem);
 }
 
-.was-testidated .form-control:testid:focus, .form-control.is-testid:focus {
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
   border-color: #198754;
   box-shadow: 0 0 0 .25rem #19875440;
 }
 
-.was-testidated textarea.form-control:testid, textarea.form-control.is-testid {
+.was-validated textarea.form-control:valid, textarea.form-control.is-valid {
   background-position: right calc(.375em + .1875rem) top calc(.375em + .1875rem);
   padding-right: calc(1.5em + .75rem);
 }
 
-.was-testidated .form-select:testid, .form-select.is-testid {
+.was-validated .form-select:valid, .form-select.is-valid {
   border-color: #198754;
 }
 
-.was-testidated .form-select:testid:not([multiple]):not([size]), .was-testidated .form-select:testid:not([multiple])[size="1"], .form-select.is-testid:not([multiple]):not([size]), .form-select.is-testid:not([multiple])[size="1"] {
+.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right .75rem center, right 2.25rem center;
   background-size: 16px 12px, calc(.75em + .375rem) calc(.75em + .375rem);
   padding-right: 4.125rem;
 }
 
-.was-testidated .form-select:testid:focus, .form-select.is-testid:focus {
+.was-validated .form-select:valid:focus, .form-select.is-valid:focus {
   border-color: #198754;
   box-shadow: 0 0 0 .25rem #19875440;
 }
 
-.was-testidated .form-check-input:testid, .form-check-input.is-testid {
+.was-validated .form-check-input:valid, .form-check-input.is-valid {
   border-color: #198754;
 }
 
-.was-testidated .form-check-input:testid:checked, .form-check-input.is-testid:checked {
+.was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked {
   background-color: #198754;
 }
 
-.was-testidated .form-check-input:testid:focus, .form-check-input.is-testid:focus {
+.was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
   box-shadow: 0 0 0 .25rem #19875440;
 }
 
-.was-testidated .form-check-input:testid ~ .form-check-label, .form-check-input.is-testid ~ .form-check-label {
+.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
   color: #198754;
 }
 
-.form-check-inline .form-check-input ~ .testid-feedback {
+.form-check-inline .form-check-input ~ .valid-feedback {
   margin-left: .5em;
 }
 
-.was-testidated .input-group .form-control:testid, .input-group .form-control.is-testid, .was-testidated .input-group .form-select:testid, .input-group .form-select.is-testid {
+.was-validated .input-group .form-control:valid, .input-group .form-control.is-valid, .was-validated .input-group .form-select:valid, .input-group .form-select.is-valid {
   z-index: 1;
 }
 
-.was-testidated .input-group .form-control:testid:focus, .input-group .form-control.is-testid:focus, .was-testidated .input-group .form-select:testid:focus, .input-group .form-select.is-testid:focus {
+.was-validated .input-group .form-control:valid:focus, .input-group .form-control.is-valid:focus, .was-validated .input-group .form-select:valid:focus, .input-group .form-select.is-valid:focus {
   z-index: 3;
 }
 
-.intestid-feedback {
+.invalid-feedback {
   width: 100%;
   color: #dc3545;
   margin-top: .25rem;
@@ -2783,7 +2783,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.intestid-tooltip {
+.invalid-tooltip {
   z-index: 5;
   max-width: 100%;
   color: #fff;
@@ -2797,11 +2797,11 @@ textarea.form-control-lg {
   top: 100%;
 }
 
-.was-testidated :intestid ~ .intestid-feedback, .was-testidated :intestid ~ .intestid-tooltip, .is-intestid ~ .intestid-feedback, .is-intestid ~ .intestid-tooltip {
+.was-validated :invalid ~ .invalid-feedback, .was-validated :invalid ~ .invalid-tooltip, .is-invalid ~ .invalid-feedback, .is-invalid ~ .invalid-tooltip {
   display: block;
 }
 
-.was-testidated .form-control:intestid, .form-control.is-intestid {
+.was-validated .form-control:invalid, .form-control.is-invalid {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-position: right calc(.375em + .1875rem) center;
   background-repeat: no-repeat;
@@ -2810,57 +2810,57 @@ textarea.form-control-lg {
   padding-right: calc(1.5em + .75rem);
 }
 
-.was-testidated .form-control:intestid:focus, .form-control.is-intestid:focus {
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 .25rem #dc354540;
 }
 
-.was-testidated textarea.form-control:intestid, textarea.form-control.is-intestid {
+.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
   background-position: right calc(.375em + .1875rem) top calc(.375em + .1875rem);
   padding-right: calc(1.5em + .75rem);
 }
 
-.was-testidated .form-select:intestid, .form-select.is-intestid {
+.was-validated .form-select:invalid, .form-select.is-invalid {
   border-color: #dc3545;
 }
 
-.was-testidated .form-select:intestid:not([multiple]):not([size]), .was-testidated .form-select:intestid:not([multiple])[size="1"], .form-select.is-intestid:not([multiple]):not([size]), .form-select.is-intestid:not([multiple])[size="1"] {
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-position: right .75rem center, right 2.25rem center;
   background-size: 16px 12px, calc(.75em + .375rem) calc(.75em + .375rem);
   padding-right: 4.125rem;
 }
 
-.was-testidated .form-select:intestid:focus, .form-select.is-intestid:focus {
+.was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 .25rem #dc354540;
 }
 
-.was-testidated .form-check-input:intestid, .form-check-input.is-intestid {
+.was-validated .form-check-input:invalid, .form-check-input.is-invalid {
   border-color: #dc3545;
 }
 
-.was-testidated .form-check-input:intestid:checked, .form-check-input.is-intestid:checked {
+.was-validated .form-check-input:invalid:checked, .form-check-input.is-invalid:checked {
   background-color: #dc3545;
 }
 
-.was-testidated .form-check-input:intestid:focus, .form-check-input.is-intestid:focus {
+.was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus {
   box-shadow: 0 0 0 .25rem #dc354540;
 }
 
-.was-testidated .form-check-input:intestid ~ .form-check-label, .form-check-input.is-intestid ~ .form-check-label {
+.was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
   color: #dc3545;
 }
 
-.form-check-inline .form-check-input ~ .intestid-feedback {
+.form-check-inline .form-check-input ~ .invalid-feedback {
   margin-left: .5em;
 }
 
-.was-testidated .input-group .form-control:intestid, .input-group .form-control.is-intestid, .was-testidated .input-group .form-select:intestid, .input-group .form-select.is-intestid {
+.was-validated .input-group .form-control:invalid, .input-group .form-control.is-invalid, .was-validated .input-group .form-select:invalid, .input-group .form-select.is-invalid {
   z-index: 2;
 }
 
-.was-testidated .input-group .form-control:intestid:focus, .input-group .form-control.is-intestid:focus, .was-testidated .input-group .form-select:intestid:focus, .input-group .form-select.is-intestid:focus {
+.was-validated .input-group .form-control:invalid:focus, .input-group .form-control.is-invalid:focus, .was-validated .input-group .form-select:invalid:focus, .input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
 
@@ -12233,10 +12233,10 @@ section {
                 <h3 class="project-wrapper__text-title">Heart Disease Binary Classification</h3>
                 <div>
                   <p class="mb-4">
-                    This project is a ML model that was tested under supervised learning with the 
+                    This project is a ML model that was trained under supervised learning with the 
                     objective of classifying whether a medical patient has heart disease or not. This was acheived through using data
                     sourced from the University of California Irvine's ML Repository and various tools provided by Anaconda, such as SKLearn, 
-                    Matplotlib, Seaborn, etc. A final prediction accuracy of 86.1% acheived alongside other etestuation metrics. More details are included in the source code!
+                    Matplotlib, Seaborn, etc. A final prediction accuracy of 86.1% acheived alongside other evaluation metrics. More details are included in the source code!
                   </p>
                 </div>
                 <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/terrysu64/Machine-Learning-and-Data-Science-Projects/blob/main/Heart%20Disease%20Classification/heart_disease_model.sav">
