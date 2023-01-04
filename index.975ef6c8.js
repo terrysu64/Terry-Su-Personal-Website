@@ -227,10 +227,10 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== "undefined") {
     var protocol = HMR_SECURE || location.protocol == "https:" && !/localhost|127.0.0.1|0.0.0.0/.test(hostname) ? "wss" : "ws";
     var ws = new WebSocket(protocol + "://" + hostname + (port ? ":" + port : "") + "/"); // Web extension context
     var extCtx = typeof chrome === "undefined" ? typeof browser === "undefined" ? null : browser : chrome; // Safari doesn't support sourceURL in error stacks.
-    // eval may also be disabled via CSP, so do a quick check.
+    // etest may also be disabled via CSP, so do a quick check.
     var supportsSourceURL = false;
     try {
-        (0, eval)('throw new Error("test"); //# sourceURL=test.js');
+        (0, etest)('throw new Error("test"); //# sourceURL=test.js');
     } catch (err) {
         supportsSourceURL = err.stack.includes("test.js");
     } // $FlowFixMe
@@ -385,12 +385,12 @@ async function hmrApplyUpdates(assets) {
     global.parcelHotUpdate = Object.create(null);
     let scriptsToRemove;
     try {
-        // If sourceURL comments aren't supported in eval, we need to load
+        // If sourceURL comments aren't supported in etest, we need to load
         // the update from the dev server over HTTP so that stack traces
-        // are correct in errors/logs. This is much slower than eval, so
+        // are correct in errors/logs. This is much slower than etest, so
         // we only do it if needed (currently just Safari).
         // https://bugs.webkit.org/show_bug.cgi?id=137297
-        // This path is also taken if a CSP disallows eval.
+        // This path is also taken if a CSP disallows etest.
         if (!supportsSourceURL) {
             let promises = assets.map((asset)=>{
                 var _hmrDownload;
@@ -440,9 +440,9 @@ function hmrApply(bundle, asset) {
                     if (parents.length === 1) hmrDelete(module.bundle.root, id);
                 }
             }
-            if (supportsSourceURL) // Global eval. We would use `new Function` here but browser
-            // support for source maps is better with eval.
-            (0, eval)(asset.output);
+            if (supportsSourceURL) // Global etest. We would use `new Function` here but browser
+            // support for source maps is better with etest.
+            (0, etest)(asset.output);
              // $FlowFixMe
             let fn = global.parcelHotUpdate[asset.id];
             modules[asset.id] = [
@@ -563,7 +563,7 @@ exports.interopDefault = function(a) {
 };
 exports.defineInteropFlag = function(a) {
     Object.defineProperty(a, "__esModule", {
-        value: true
+        testue: true
     });
 };
 exports.exportAll = function(source, dest) {
@@ -765,7 +765,7 @@ var classCallCheck = function(instance, Constructor) {
         this.settings.scale = backupScale;
         this.resetGlare();
     };
-    VanillaTilt.prototype.getValues = function getValues() {
+    VanillaTilt.prototype.gettestues = function gettestues() {
         var x = void 0, y = void 0;
         if (this.fullPageListening) {
             x = this.event.clientX / this.clientWidth;
@@ -795,14 +795,14 @@ var classCallCheck = function(instance, Constructor) {
         this.top = rect.top;
     };
     VanillaTilt.prototype.update = function update() {
-        var values = this.getValues();
-        this.element.style.transform = "perspective(" + this.settings.perspective + "px) " + "rotateX(" + (this.settings.axis === "x" ? 0 : values.tiltY) + "deg) " + "rotateY(" + (this.settings.axis === "y" ? 0 : values.tiltX) + "deg) " + "scale3d(" + this.settings.scale + ", " + this.settings.scale + ", " + this.settings.scale + ")";
+        var testues = this.gettestues();
+        this.element.style.transform = "perspective(" + this.settings.perspective + "px) " + "rotateX(" + (this.settings.axis === "x" ? 0 : testues.tiltY) + "deg) " + "rotateY(" + (this.settings.axis === "y" ? 0 : testues.tiltX) + "deg) " + "scale3d(" + this.settings.scale + ", " + this.settings.scale + ", " + this.settings.scale + ")";
         if (this.glare) {
-            this.glareElement.style.transform = "rotate(" + values.angle + "deg) translate(-50%, -50%)";
-            this.glareElement.style.opacity = "" + values.percentageY * this.settings["max-glare"] / 100;
+            this.glareElement.style.transform = "rotate(" + testues.angle + "deg) translate(-50%, -50%)";
+            this.glareElement.style.opacity = "" + testues.percentageY * this.settings["max-glare"] / 100;
         }
         this.element.dispatchEvent(new CustomEvent("tiltChange", {
-            "detail": values
+            "detail": testues
         }));
         this.updateCall = null;
     };
